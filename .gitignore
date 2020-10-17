@@ -1,0 +1,8 @@
+.vscode
+.venv
+scratch
+**/__pycache__
+gifs
+build
+dist
+*.egg*
