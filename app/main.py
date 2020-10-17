@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, send_file
 from gifgen import generator
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def hello():
             <title>Among Us GIF Generator</title>
         </head>
         <body>
-            <form action="#" method="POST">
+            <form action="/" method="POST">
                 <label for="person">Name</label>
                 <input type="text" name="person"><br><br>
                 <label for="color">Color</label>
@@ -72,10 +72,14 @@ def process():
         color = data['color'] if data['color'] != 'None' else None
         skin = data['skin'] if data['skin'] != 'None' else None
         person = data['person']
-        print(request.form, impostor, color, skin, person)
-        gif_name = generator.generate_ejection_message(color=color, skn=skin, impostor=impostor, path='/app/gif', person=person)
+        gif_name = generator.generate_ejection_message(color=color, skn=skin, impostor=impostor, path='./gifs', person=person)
+        print(gif_name)
         return redirect('gif/'+gif_name)
         #return redirect('/')
+
+@app.route("/gif/<gif>")
+def display_fig(gif):
+    return send_file('gifs/' + gif, mimetype='image/gif')
 
 
 if __name__ == "__main__":
