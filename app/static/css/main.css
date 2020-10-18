@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(22, 22, 22, 1);
+}
+.bg-very-dark {
+    background-color: rgb(36, 36, 36, 1);
+}
+.red {
+    background-color: rgba(198, 17, 17, 1);
+}
+.blue {
+    background-color: rgba(19,46,210, 1);
+}
+.green {
+    background-color: rgba(17, 128, 45, 1);
+}
+.pink {
+    background-color: rgba(238, 84, 187, 1);
+}
+.orange {
+    background-color: rgba(240, 125, 13, 1);
+}
+.yellow {
+    background-color: rgba(246, 246, 87, 1);
+}
+.grey {
+    background-color: rgba(63, 71, 78, 1);
+}
+.white {
+    background-color: rgba(215, 225, 241, 1);
+}
+.purple {
+    background-color: rgba(107, 47, 188, 1);
+}
+.brown {
+    background-color: rgba(113, 73, 30, 1);
+}
+.cyan {
+    background-color: rgba(56, 255, 221, 1);
+}
+.lime {
+    background-color: rgba(80, 240, 57, 1);
+}
