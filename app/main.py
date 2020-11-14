@@ -23,6 +23,17 @@ def ejection():
     else:
         return render_template('ejection.html')
 
+@app.route("/message", methods=['GET', 'POST'])
+def message():
+    if request.method == 'POST':
+        data = request.form
+        color = data['color'] if data['color'] != 'None' else None
+        skin = data['skin'] if data['skin'] != 'None' else None
+        text = data['text']
+        gif_name = generator.generate_ejection_custom_message(color=color, skn=skin, text=text, path='./gifs')
+        return redirect('gif/'+gif_name)
+    else:
+        return render_template('message.html')
 
 @app.route("/gif/<gif>")
 def display_fig(gif):

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="jumbotron bg-transparent">
+        <h1 class="display-1 text-center text-muted">Among Us Ejection GIF Generator</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form action="/message" method="POST">
+                <div class="form-group text-light">
+                    <label for="text">Full Message</label>
+                    <input type="text" class="form-control" name="text">
+                </div>
+                {% include "_crewmate_selection.html" %}
+                <button type="submit" class="btn btn-dark btn-large btn-block">Generate My GIF</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
