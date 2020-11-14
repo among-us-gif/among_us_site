@@ -40,3 +40,6 @@ body {
 .lime {
     background-color: rgba(80, 240, 57, 1);
 }
+.image-label {
+    padding: 0.4em 0.65em;
+}
