@@ -1,6 +1,7 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.8
 
 LABEL maintainer="david.dellsperger@gmail.com"
+LABEL org.opencontainers.image.source="https://github.com/among-us-gif/among_us_site"
 
 ENV STATIC_URL /static
 ENV STATIC_PATH /app/static
