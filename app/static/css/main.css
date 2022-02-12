@@ -5,40 +5,58 @@ body {
     background-color: rgb(36, 36, 36, 1);
 }
 .red {
-    background-color: rgba(198, 17, 17, 1);
+	background-color: rgb(215, 30, 34);
 }
 .blue {
-    background-color: rgba(19,46,210, 1);
+	background-color: rgb(29, 60, 233);
 }
 .green {
-    background-color: rgba(17, 128, 45, 1);
+	background-color: rgb(27, 145, 62);
 }
 .pink {
-    background-color: rgba(238, 84, 187, 1);
+	background-color: rgb(255, 99, 212);
 }
 .orange {
-    background-color: rgba(240, 125, 13, 1);
+	background-color: rgb(255, 141, 28);
 }
 .yellow {
-    background-color: rgba(246, 246, 87, 1);
+	background-color: rgb(255, 255, 103);
 }
-.grey {
-    background-color: rgba(63, 71, 78, 1);
+.black {
+	background-color: rgb(74, 86, 94);
 }
 .white {
-    background-color: rgba(215, 225, 241, 1);
+	background-color: rgb(233, 247, 255);
 }
 .purple {
-    background-color: rgba(107, 47, 188, 1);
+	background-color: rgb(120, 61, 210);
 }
 .brown {
-    background-color: rgba(113, 73, 30, 1);
+	background-color: rgb(128, 88, 45);
 }
 .cyan {
-    background-color: rgba(56, 255, 221, 1);
+	background-color: rgb(68, 255, 247);
 }
 .lime {
-    background-color: rgba(80, 240, 57, 1);
+	background-color: rgb(91, 255, 75);
+}
+.maroon {
+	background-color: rgb(108, 43, 61);
+}
+.rose {
+	background-color: rgb(255, 214, 236);
+}
+.banana {
+	background-color: rgb(255, 255, 190);
+}
+.gray {
+	background-color: rgb(131, 151, 167);
+}
+.tan {
+	background-color: rgb(159, 153, 137);
+}
+.coral {
+	background-color: rgb(236, 117, 120);
 }
 .image-label {
     padding: 0.4em 0.65em;
