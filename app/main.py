@@ -23,12 +23,16 @@ def ejection():
     if request.method == 'POST':
         data = request.form
         impostor = True if data['impostor'] == 'True' else (
-            False if data['impostor'] == 'False' else (None if data['impostor'] == 'None' else 'rand'))
+            False if data['impostor'] == 'False' else (
+                None if data['impostor'] == 'None' else 'rand'
+            )
+        )
         color = data['color'] if data['color'] != 'None' else None
         skin = data['skin'] if data['skin'] != 'None' else None
         person = data['person']
         gif_name = generator.generate_ejection_message(
-            color=color, skn=skin, impostor=impostor, path='./gifs', person=person)
+            color=color, skn=skin, impostor=impostor, path='./gifs', person=person,
+        )
         return redirect('gif/'+gif_name)
     else:
         return render_template('ejection.html')
@@ -42,7 +46,8 @@ def message():
         skin = data['skin'] if data['skin'] != 'None' else None
         text = data['text']
         gif_name = generator.generate_ejection_custom_message(
-            color=color, skn=skin, text=text, path='./gifs')
+            color=color, skn=skin, text=text, path='./gifs',
+        )
         return redirect('gif/'+gif_name)
     else:
         return render_template('message.html')
