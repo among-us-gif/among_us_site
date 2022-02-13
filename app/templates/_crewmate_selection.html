@@ -15,90 +15,18 @@
                     <label class="custom-control-label text-dark ml-3" for="randomColor">Random</label>
                 </div>
             </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline red m-0">
-                    <input type="radio" id="redColor" name="color" value="red" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="redColor"><img src="/static/img/red_idle.png" class="image-label" alt="Red Among Us Crewmate" title="Red Among Us Crewmate">Red</label>
+            {% for color in colors %}
+                {% if loop.index0 % 3 == 0 %}
+                <div class="row">
+                {% endif %}
+                    <div class="col custom-control custom-radio custom-control-inline {{color}} m-0">
+                        <input type="radio" id="{{color}}Color" name="color" value="{{color}}" class="custom-control-input">
+                        <label class="custom-control-label {{'text-light' if color in light_colors else 'text-dark'}} ml-3" for="{{color}}Color"><img src="/static/img/{{color}}_idle.png" class="image-label" alt="{{color|title}} Among Us Crewmate" title="{{color|title}} Among Us Crewmate">{{color|title}}</label>
+                    </div>
+                {% if loop.index0 % 3 == 2 or loop.last %}
                 </div>
-                <div class="col custom-control custom-radio custom-control-inline blue m-0">
-                    <input type="radio" id="blueColor" name="color" value="blue" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="blueColor"><img src="/static/img/blue_idle.png" class="image-label" alt="Blue Among Us Crewmate" title="Blue Among Us Crewmate">Blue</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline green m-0">
-                    <input type="radio" id="greenColor" name="color" value="green" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="greenColor"><img src="/static/img/green_idle.png" class="image-label" alt="Green Among Us Crewmate" title="Green Among Us Crewmate">Green</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline pink m-0">
-                    <input type="radio" id="pinkColor" name="color" value="pink" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="pinkColor"><img src="/static/img/pink_idle.png" class="image-label" alt="Pink Among Us Crewmate" title="Pink Among Us Crewmate">Pink</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline orange m-0">
-                    <input type="radio" id="orangeColor" name="color" value="orange" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="orangeColor"><img src="/static/img/orange_idle.png" class="image-label" alt="Orange Among Us Crewmate" title="Orange Among Us Crewmate">Orange</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline yellow m-0">
-                    <input type="radio" id="yellowColor" name="color" value="yellow" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="yellowColor"><img src="/static/img/yellow_idle.png" class="image-label" alt="Yellow Among Us Crewmate" title="Yellow Among Us Crewmate">Yellow</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline black m-0">
-                    <input type="radio" id="blackColor" name="color" value="black" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="blackColor"><img src="/static/img/black_idle.png" class="image-label" alt="Black Among Us Crewmate" title="Black Among Us Crewmate">Black</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline white m-0">
-                    <input type="radio" id="whiteColor" name="color" value="white" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="whiteColor"><img src="/static/img/white_idle.png" class="image-label" alt="White Among Us Crewmate" title="White Among Us Crewmate">White</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline purple m-0">
-                    <input type="radio" id="purpleColor" name="color" value="purple" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="purpleColor"><img src="/static/img/purple_idle.png" class="image-label" alt="Purple Among Us Crewmate" title="Purple Among Us Crewmate">Purple</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline brown m-0">
-                    <input type="radio" id="brownColor" name="color" value="brown" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="brownColor"><img src="/static/img/brown_idle.png" class="image-label" alt="Brown Among Us Crewmate" title="Brown Among Us Crewmate">Brown</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline cyan m-0">
-                    <input type="radio" id="cyanColor" name="color" value="cyan" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="cyanColor"><img src="/static/img/cyan_idle.png" class="image-label" alt="Cyan Among Us Crewmate" title="Cyan Among Us Crewmate">Cyan</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline lime m-0">
-                    <input type="radio" id="limeColor" name="color" value="lime" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="limeColor"><img src="/static/img/lime_idle.png" class="image-label" alt="Lime Among Us Crewmate" title="Lime Among Us Crewmate">Lime</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline maroon m-0">
-                    <input type="radio" id="maroonColor" name="color" value="maroon" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="maroonColor"><img src="/static/img/maroon_idle.png" class="image-label" alt="Maroon Among Us Crewmate" title="Maroon Among Us Crewmate">Maroon</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline rose m-0">
-                    <input type="radio" id="roseColor" name="color" value="rose" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="roseColor"><img src="/static/img/rose_idle.png" class="image-label" alt="Rose Among Us Crewmate" title="Rose Among Us Crewmate">Rose</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline banana m-0">
-                    <input type="radio" id="bananaColor" name="color" value="banana" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="bananaColor"><img src="/static/img/banana_idle.png" class="image-label" alt="Banana Among Us Crewmate" title="Banana Among Us Crewmate">Banana</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col custom-control custom-radio custom-control-inline gray m-0">
-                    <input type="radio" id="grayColor" name="color" value="gray" class="custom-control-input">
-                    <label class="custom-control-label text-light ml-3" for="grayColor"><img src="/static/img/gray_idle.png" class="image-label" alt="Gray Among Us Crewmate" title="Gray Among Us Crewmate">Gray</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline tan m-0">
-                    <input type="radio" id="tanColor" name="color" value="tan" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="tanColor"><img src="/static/img/tan_idle.png" class="image-label" alt="Tan Among Us Crewmate" title="Tan Among Us Crewmate">Tan</label>
-                </div>
-                <div class="col custom-control custom-radio custom-control-inline coral m-0">
-                    <input type="radio" id="coralColor" name="color" value="coral" class="custom-control-input">
-                    <label class="custom-control-label text-dark ml-3" for="coralColor"><img src="/static/img/coral_idle.png" class="image-label" alt="Coral Among Us Crewmate" title="Coral Among Us Crewmate">Coral</label>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
