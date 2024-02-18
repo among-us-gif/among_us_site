@@ -6,3 +6,4 @@ gifs
 build
 dist
 *.egg*
+*.code-workspace
