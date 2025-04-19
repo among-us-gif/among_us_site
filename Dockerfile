@@ -1,4 +1,4 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.11
+FROM tiangolo/uwsgi-nginx-flask:python3.12
 
 LABEL maintainer="david.dellsperger@gmail.com"
 LABEL org.opencontainers.image.source="https://github.com/among-us-gif/among_us_site"
